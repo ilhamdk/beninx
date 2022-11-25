@@ -15,6 +15,10 @@ html, body{
   scroll-behavior: smooth;
 }
 
+.coba{
+  margin: auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
