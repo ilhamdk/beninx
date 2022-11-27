@@ -1,18 +1,34 @@
 import React from 'react'
+
 import Logo from '../img/logo.png'
 import Avatar from '../img/avatar.png'
 import {MdShoppingCart} from 'react-icons/md'
 
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from '../firebase.config';
+
 const header = () => {
+
+  const firebaseAuth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const login = async () => {
+    const response = await signInWithPopup(firebaseAuth, provider)
+    console.log(response);
+  };
+
   return (
     <header className="fixed z-50 w-screen p-6 px-16">
 
       {/* desktop and tablet */}
       <div className="items-center justify-between hidden w-full h-full md:flex">
-        <div className="flex items-center gap-2">
+        <Link to={"/"} className="flex items-center gap-2">
           <img src={Logo} className="object-cover w-8" alt="logo" />
           <p className="text-xl font-bold text-headingColor">City</p>
-        </div>
+        </Link>
 
         <div className='flex items-center gap-8'>
         <ul className="flex items-center gap-8">
@@ -28,7 +44,9 @@ const header = () => {
           </div>
         </div>
 
-        <img src={Avatar} className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl" alt="userprofile" />
+        <div className="relative">
+        <motion.img whileTap={{ scale: 0.6 }} src={Avatar} className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer" alt="userprofile" onClick={login} />
+        </div>
         </div>
       </div>
 
