@@ -24,7 +24,7 @@ const header = () => {
     dispatch({
       type:actionType.SET_USER,
       user: providerData[0]
-    })
+    });
   };
 
   return (
@@ -52,7 +52,7 @@ const header = () => {
         </div>
 
         <div className="relative">
-        <motion.img whileTap={{ scale: 0.6 }} src={Avatar} className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer" alt="userprofile" onClick={login} />
+        <motion.img whileTap={{ scale: 0.6 }} src={user ? user.photoURL : Avatar} className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer rounded-full" alt="userprofile" onClick={login} />
         </div>
         </div>
       </div>
