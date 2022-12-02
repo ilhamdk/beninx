@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 
 import Logo from '../img/logo.png'
@@ -25,6 +26,7 @@ const header = () => {
       type:actionType.SET_USER,
       user: providerData[0]
     });
+    localStorage.setItem("user", JSON.stringify(providerData[0]));
   };
 
   return (
