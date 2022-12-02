@@ -38,14 +38,14 @@ const header = () => {
     }
   };
 
-  const logout=()=>{
-    setisMenu(false)
-    localStorage.clear()
+  const logout = () => {
+    setisMenu(false);
+    localStorage.clear();
     dispatch({
-      type:actionType.SET_USER,
-      user:null
-    })
-  }
+      type: actionType.SET_USER,
+      user: null,
+    });
+  };
 
   return (
     <header className="fixed z-50 w-screen p-4 px-5 md:p-6 md:px-16">
@@ -98,14 +98,17 @@ const header = () => {
                 exit={{ opacity: 0, scale: 0.6 }}
                 className="w-40 bg-gray-50 shadow-x1 rounded-lg flex flex-col absolute top-12 right-0"
               >
-                {user && user.email === "naadiramalaika.atsiila@gmail.com" && (
+                {user && user.email === "barbeninx@gmail.com" && (
                   <Link to={"/createItem"}>
                     <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textcolor text-base rounded-t-lg">
                       <MdAdd /> New Item
                     </p>
                   </Link>
                 )}
-                <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textcolor text-base rounded-b-lg" onClick={logout}>
+                <p
+                  className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textcolor text-base rounded-b-lg"
+                  onClick={logout}
+                >
                   <MdLogout /> Log Out
                 </p>
               </motion.div>
@@ -116,6 +119,13 @@ const header = () => {
 
       {/* mobile */}
       <div className="flex items-center justify-between w-full h-full md:hidden">
+        <div className="relative flex items-center justify-center">
+          <MdShoppingCart className="text-2xl cursor-pointer text-textColor" />
+          <div className="absolute flex items-center justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-cartNumBg">
+            <p className="text-xs font-semibold text-white">2</p>
+          </div>
+        </div>
+
         <Link to={"/"} className="flex items-center gap-2">
           <img src={Logo} className="object-cover w-8" alt="logo" />
           <p className="text-xl font-bold text-headingColor">City</p>
@@ -136,7 +146,7 @@ const header = () => {
               exit={{ opacity: 0, scale: 0.6 }}
               className="w-40 bg-gray-50 shadow-x1 rounded-lg flex flex-col absolute top-12 right-0"
             >
-              {user && user.email === "naadiramalaika.atsiila@gmail.com" && (
+              {user && user.email === "barbeninx@gmail.com" && (
                 <Link to={"/createItem"}>
                   <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base rounded-t-lg">
                     New Item <MdAdd />
@@ -158,7 +168,10 @@ const header = () => {
                   Service
                 </li>
               </ul>
-              <p className="m-2 p-2 rounded-md shadow-md flex items-center justify-center bg-gray-200 gap-3 cursor-pointer hover:bg-gray-300 transition-all duration-100 ease-in-out text-textColor text-base" onClick={logout}>
+              <p
+                className="m-2 p-2 rounded-md shadow-md flex items-center justify-center bg-gray-200 gap-3 cursor-pointer hover:bg-gray-300 transition-all duration-100 ease-in-out text-textColor text-base"
+                onClick={logout}
+              >
                 Log Out <MdLogout />
               </p>
             </motion.div>
