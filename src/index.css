@@ -16,6 +16,11 @@ html, body{
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 345px) {
+  body {
+    overflow-y: hidden
+  }
+}
 
 @tailwind base;
 @tailwind components;
