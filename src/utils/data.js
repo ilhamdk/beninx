@@ -27,9 +27,8 @@ export const categories = [
   { id : 10, name : 'Soju', urlParamName: "soju",},
   { id : 11, name : 'Absinthe', urlParamName: "absinthe",},
   { id : 12, name : 'Mocktail', urlParamName: "mocktail",},
-  { id : 13, name : 'Blender juice', urlParamName: "blender juice",},
-  { id : 14, name : 'Soft drink', urlParamName: "soft drink",},
-  { id : 15, name : 'Coffe & tea', urlParamName: "coffe & tea",},
-  { id : 16, name : 'Juice', urlParamName: "juice",},
+  { id : 13, name : 'Soft drink', urlParamName: "soft drink",},
+  { id : 14, name : 'Coffe & tea', urlParamName: "coffe & tea",},
+  { id : 15, name : 'Juice', urlParamName: "juice",},
 
 ];

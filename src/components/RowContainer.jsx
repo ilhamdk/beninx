@@ -9,7 +9,7 @@ const RowContainer = ({flag, data, scrollValue}) => {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
   return (
-    <div ref={rowContainer} className={`w-full my-12 gap-3 scroll-smooth flex items-center ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap"}`}>
+    <div ref={rowContainer} className={`w-full my-12 gap-3 scroll-smooth flex items-center ${flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify-center"}`}>
       {data && data.map(item => (
         <div key={item.id} className='h-auto min-w-[300px] md:min-w-[340px]: p-2 my-12 bg-gray-100 rounded-lg w-300 md:w-340 bg-cardOverlay hover:drop-shadow-lg backdrop-blur-lg flex flex-col items-center justify-between'>
         <div className='flex items-center justify-between w-full'>
