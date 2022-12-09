@@ -17,7 +17,7 @@ const header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  const [{ user, cartShow }, dispatch] = useStateValue();
+  const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
 
   const [isMenu, setisMenu] = useState(false);
 
@@ -100,9 +100,13 @@ const header = () => {
             onClick={showCart}
           >
             <MdShoppingCart className="text-2xl cursor-pointer text-white" />
-            <div className="absolute flex items-center border border-black justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-white">
-              <p className="text-xs font-semibold text-black">2</p>
-            </div>
+            {cartItems && cartItems.length > 0 && (
+              <div className="absolute flex items-center border border-black justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-white">
+                <p className="text-xs font-semibold text-black">
+                  {cartItems.length}
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="relative">
@@ -149,9 +153,13 @@ const header = () => {
           onClick={showCart}
         >
           <MdShoppingCart className="text-2xl cursor-pointer text-textColor" />
-          <div className="absolute flex items-center justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-cartNumBg">
-            <p className="text-xs font-semibold text-white">2</p>
-          </div>
+          {cartItems && cartItems.length > 0 && (
+            <div className="absolute flex items-center border border-black justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-white">
+              <p className="text-xs font-semibold text-black">
+                {cartItems.length}
+              </p>
+            </div>
+          )}
         </div>
 
         <Link to={"/"} className="flex items-center gap-2">
