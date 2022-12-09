@@ -55,7 +55,7 @@ const header = () => {
   };
 
   return (
-    <header className="fixed z-50 w-screen p-4 px-5 md:p-6 md:px-16 bg-black ">
+    <header className="fixed z-50 w-screen p-4 px-5 bg-black md:p-6 md:px-16 ">
       {/* desktop and tablet */}
       <div className="items-center justify-between hidden w-full h-full md:flex">
         <Link to={"/"} className="flex items-center gap-2">
@@ -70,26 +70,28 @@ const header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-8"
           >
-            <li
-              className="text-base transition-all duration-100 ease-in-out cursor-pointer text-white hover:text-headingColor"
+            <Link to={"/"}>
+              <li
+              className="text-base text-white transition-all duration-100 ease-in-out cursor-pointer"
               onClick={() => setisMenu(false)}
-            >
-              Home
-            </li>
+              >
+                Home
+              </li>
+            </Link>
             <li
-              className="text-base transition-all duration-100 ease-in-out cursor-pointer text-white hover:text-headingColor"
+              className="text-base text-white transition-all duration-100 ease-in-out cursor-pointer"
               onClick={() => setisMenu(false)}
             >
               Menu
             </li>
             <li
-              className="text-base transition-all duration-100 ease-in-out cursor-pointer text-white hover:text-headingColor"
+              className="text-base text-white transition-all duration-100 ease-in-out cursor-pointer"
               onClick={() => setisMenu(false)}
             >
               About Us
             </li>
             <li
-              className="text-base transition-all duration-100 ease-in-out cursor-pointer text-white hover:text-headingColor"
+              className="text-base text-white transition-all duration-100 ease-in-out cursor-pointer"
               onClick={() => setisMenu(false)}
             >
               Service
@@ -99,9 +101,9 @@ const header = () => {
             className="relative flex items-center justify-center"
             onClick={showCart}
           >
-            <MdShoppingCart className="text-2xl cursor-pointer text-white" />
+            <MdShoppingCart className="text-2xl text-white cursor-pointer" />
             {cartItems && cartItems.length > 0 && (
-              <div className="absolute flex items-center border border-black justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-white">
+              <div className="absolute flex items-center justify-center w-5 h-5 bg-white border border-black rounded-full -top-2 -right-2">
                 <p className="text-xs font-semibold text-black">
                   {cartItems.length}
                 </p>
@@ -154,7 +156,7 @@ const header = () => {
         >
           <MdShoppingCart className="text-2xl cursor-pointer text-textColor" />
           {cartItems && cartItems.length > 0 && (
-            <div className="absolute flex items-center border border-black justify-center w-5 h-5 rounded-full -top-2 -right-2 bg-white">
+            <div className="absolute flex items-center justify-center w-5 h-5 bg-white border border-black rounded-full -top-2 -right-2">
               <p className="text-xs font-semibold text-black">
                 {cartItems.length}
               </p>

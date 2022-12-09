@@ -52,7 +52,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               />
               <motion.div
                 whileTap={{ scale: 0.75 }}
-                className="flex items-center justify-center w-8 h-8 bg-red-600 rounded-full cursor-pointer drop-shadow-2xl hover:shadow-md"
+                className="flex items-center justify-center w-8 h-8 rounded-full cursor-pointer bg-blues drop-shadow-2xl hover:shadow-md"
                 onClick={() => setItems([...cartItems, item])}
               >
                 <MdShoppingCart className="text-white" />

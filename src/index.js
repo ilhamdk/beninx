@@ -8,11 +8,13 @@ import App from "./App";
 import { StateProvider } from "./context/StateProvider";
 import { initialState } from "./context/initialState";
 import reducer from "./context/reducer";
+import FooterContainer from "./components/FooterContainer";
 
 ReactDOM.render(
   <Router>
     <StateProvider initialState={initialState} reducer={reducer}>
       <App />
+      <FooterContainer />
     </StateProvider>
   </Router>,
   document.getElementById("root")

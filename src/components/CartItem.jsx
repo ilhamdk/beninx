@@ -53,7 +53,7 @@ const CartItem = ({ item, setFlag, flag }) => {
   }, [qty, items]);
 
   return (
-    <div className="w-full p-1 px-2 rounded-lg bg-cartItem flex items-center gap-2">
+    <div className="flex items-center w-full gap-2 p-1 px-2 rounded-lg bg-cartItem">
       <img
         src={item?.imageUrl}
         className="w-20 h-20 max-w-[60px] rounded-full object-contain"
@@ -63,13 +63,13 @@ const CartItem = ({ item, setFlag, flag }) => {
       {/* name section */}
       <div className="flex flex-col gap-2">
         <p className="text-base text-gray-50">{item?.title}</p>
-        <p className="text-sm block text-gray-300 font-semibold">
-          Rp {parseFloat(item?.price) * qty} K
+        <p className="block text-sm font-semibold text-gray-300">
+          Rp {parseFloat(item?.price) * qty}.000
         </p>
       </div>
 
       {/* button section */}
-      <div className="group flex items-center gap-2 ml-auto cursor-pointer">
+      <div className="flex items-center gap-2 ml-auto cursor-pointer group">
         <motion.div
           whileTap={{ scale: 0.75 }}
           onClick={() => updateQty("remove", item?.id)}
@@ -77,7 +77,7 @@ const CartItem = ({ item, setFlag, flag }) => {
           <BiMinus className="text-gray-50" />
         </motion.div>
 
-        <p className="w-5 h-5 rounded-sm bg-cartBg text-gray-50 flex items-center justify-center">
+        <p className="flex items-center justify-center w-5 h-5 rounded-sm bg-cartBg text-gray-50">
           {qty}
         </p>
 
