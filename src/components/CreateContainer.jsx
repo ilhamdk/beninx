@@ -188,7 +188,7 @@ const CreateContainer = () => {
         <div className='flex flex-col items-center w-full gap-3 md:flex-row'>
           <div className='flex items-center w-full gap-2 py-2 border-b border-gray-300'>
             <MdFoodBank  className='text-2xl text-gray-700'/>
-            <input value={calories} onChange={(e) => setCalories(e.target.value)} type="text" required placeholder='Calories' className='w-full h-full text-lg bg-transparent border-none outline-none placeholder:text-gray-400 text-textColor' />
+            <input value={calories} onChange={(e) => setCalories(e.target.value)} type="text" required placeholder='Alcohol' className='w-full h-full text-lg bg-transparent border-none outline-none placeholder:text-gray-400 text-textColor' />
           </div>
           <div className='flex items-center w-full gap-2 py-2 border-b border-gray-300'>
             <MdPriceChange  className='text-2xl text-gray-700'/>

@@ -1,6 +1,6 @@
 import React from "react";
-import Delivery from "../img/delivery.png";
 import heros from "../img/heros.jpg";
+import { IoCall } from "react-icons/io5";
 import { heroData } from "../utils/data";
 
 
@@ -13,11 +13,7 @@ const HomeContainer = () => {
             Beninx reservation
           </p>
           <div className="w-8 h-8 overflow-hidden bg-white rounded-full drop-shadow-xl">
-            <img
-              src={Delivery}
-              alt="Beninx"
-              className="object-contain w-full h-full"
-            />
+            <IoCall className="object-contain w-full h-full" />
           </div>
         </div>
 
@@ -30,12 +26,8 @@ const HomeContainer = () => {
         </p>
 
         <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis magni,
-          consequuntur temporibus voluptatem voluptate omnis blanditiis ex,
-          eius, corrupti eum laudantium vero inventore nostrum necessitatibus
-          delectus perspiciatis repellendus totam recusandae!
+          BAR BENINX adalah sebuah website yang dibuat untuk melakukan pemesanan makanan dan minuman di BAR BENINX.
         </p>
-    
         <button
           type="button"
           className="w-full px-4 py-2 transition-all duration-100 ease-in-out rounded-lg bg-oranges md:w-auto hover:shadow-lg"
