@@ -16,6 +16,14 @@ html, body{
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14213d; 
+}
+
 @media screen and (max-width: 950px) {
   body {
     overflow-y: hidden

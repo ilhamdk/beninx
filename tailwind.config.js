@@ -37,6 +37,7 @@ module.exports = {
         620: "620px",
       },
       screens: {
+        ssm: "300px",
         sm: "640px",
         md: "768px",
         mx: "880px",
@@ -55,6 +56,8 @@ module.exports = {
         cartBg: "#282a2c",
         cartItem: "#2e3033",
         cartTotal: "#343739",
+        oranges: "#FCA311",
+        blues: "#14213d",
       },
     },
   },
